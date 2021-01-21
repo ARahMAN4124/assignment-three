@@ -14,10 +14,10 @@ function kilometerToMeter(inputNumber) {
 console.log(kilometerToMeter(10));
 
 //problem number two(budgetCalculator)
-function budgetCalculator(num1, num2, num3) {
-  let watchPrice = 50 * num1;
-  let mobilePrice = 100 * num2;
-  let laptopPrice = 500 * num3;
+function budgetCalculator(watch, mobile, laptop) {
+  let watchPrice = 50 * watch;
+  let mobilePrice = 100 * mobile;
+  let laptopPrice = 500 * laptop;
   let totalPrice = watchPrice + mobilePrice + laptopPrice;
   if (totalPrice < 0) {
     return "this is not valid input";
@@ -28,6 +28,7 @@ function budgetCalculator(num1, num2, num3) {
 console.log(budgetCalculator(10, 2, 10));
 
 //problem number three(hotelCost)
+
 function hotelCost(days) {
   let totalBill = 0;
   if (days < 0) {
