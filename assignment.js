@@ -26,6 +26,7 @@ function budgetCalculator(watch, mobile, laptop) {
   }
 }
 console.log(budgetCalculator(10, 2, 10));
+
 //problem number three(hotelCost)
 
 function hotelCost(days) {
@@ -40,7 +41,7 @@ function hotelCost(days) {
     return (totalBill = secondPrice * 80 + firstprice);
   } else {
     var firstprice = 100 * 10;
-    var secondPrice = 10 * 80;
+    var secondPrice = 80 * 10;
     var thirdPrice = days - 20;
     return (totalBill = thirdPrice * 50 + firstprice + secondPrice);
   }
