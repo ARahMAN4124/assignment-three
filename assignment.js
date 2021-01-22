@@ -4,9 +4,9 @@
 //problem number one(kilometerToMeter)
 
 function kilometerToMeter(inputNumber) {
-  let meter = inputNumber * 1000;
-  if (meter < 0) {
-    return "this is not valid number";
+  var meter = inputNumber * 1000;
+  if (inputNumber < 0) {
+    return "Input number will not be negative."; //reminder in output,if input number is negative;
   } else {
     return meter;
   }
@@ -15,37 +15,48 @@ console.log(kilometerToMeter(10));
 
 //problem number two(budgetCalculator)
 function budgetCalculator(watch, mobile, laptop) {
-  let watchPrice = 50 * watch;
-  let mobilePrice = 100 * mobile;
-  let laptopPrice = 500 * laptop;
-  let totalPrice = watchPrice + mobilePrice + laptopPrice;
-  if (totalPrice < 0) {
-    return "this is not valid input";
+  var watchPrice = 50 * watch;
+  var mobilePrice = 100 * mobile;
+  var laptopPrice = 500 * laptop;
+  var totalPrice = watchPrice + mobilePrice + laptopPrice;
+  if (watch < 0 || mobile < 0 || laptop < 0) {
+    return "Input number will not be negative."; //reminder in output,if input number is negative;
   } else {
     return totalPrice;
   }
 }
 console.log(budgetCalculator(10, 2, 10));
-
 //problem number three(hotelCost)
 
 function hotelCost(days) {
-  let totalBill = 0;
+  var totalBill = 0;
   if (days < 0) {
-    return "this is not valid number";
+    return "The day can never be negative."; //reminder in output,if input number is negative;
   } else if (days <= 10) {
     return (totalBill = 100 * days);
   } else if (days > 10 && days <= 20) {
-    let firstprice = 100 * 10;
-    let secondPrice = days - 10;
+    var firstprice = 100 * 10;
+    var secondPrice = days - 10;
     return (totalBill = secondPrice * 80 + firstprice);
   } else {
-    let firstprice = 100 * 10;
-    let secondPrice = 10 * 80;
-    let thirdPrice = days - 20;
+    var firstprice = 100 * 10;
+    var secondPrice = 10 * 80;
+    var thirdPrice = days - 20;
     return (totalBill = thirdPrice * 50 + firstprice + secondPrice);
   }
 }
-console.log(hotelCost(10));
+console.log(hotelCost(15));
+
 //problem number four(megaFriend)
-function megaFriend() {}
+
+function megaFriend(names) {
+  var largeName = names[0];
+  for (var i = 0; i < names.length; i++) {
+    var element = names[i];
+    if (element.length > largeName.length) {
+      largeName = element;
+    }
+  }
+  return largeName;
+}
+console.log(megaFriend(["ab", "abc", "abcd", "abcde"]));
